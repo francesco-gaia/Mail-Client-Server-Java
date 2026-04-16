@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.image.Image?>
+<VBox alignment="CENTER" prefHeight="500.0" prefWidth="700.0" spacing="10.0" style="-fx-background-color: #F0F0F0;" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="client.controller.LoginController">
+
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+    </padding>
+
+    <ImageView fitHeight="120.0" preserveRatio="true">
+        <image>
+            <Image url="@images/envelope.png" />
+        </image>
+    </ImageView>
+
+    <VBox alignment="CENTER" spacing="5.0">
+
+        <padding>
+            <Insets bottom="10.0" left="20.0" right="20.0" top="10.0" />
+        </padding>
+
+        <Label text="Benvenuto" textFill="#333333">
+            <font>
+                <Font name="System Bold" size="24.0" />
+            </font>
+        </Label>
+        <Label text="Inserisci la tua mail" textFill="#666666">
+            <font>
+                <Font size="14.0" />
+            </font>
+        </Label>
+    </VBox>
+
+    <VBox alignment="CENTER_LEFT" maxWidth="350.0" spacing="10.0" style="-fx-background-radius: 15; -fx-background-color: #FFFFFF;">
+
+        <VBox spacing="8.0">
+            <Label text="Email Utente" textFill="#555555">
+                <font>
+                    <Font name="System Bold" size="12.0" />
+                </font>
+            </Label>
+            <TextField fx:id="emailField" prefHeight="45.0" promptText="nome@dominio.it" style="-fx-background-radius: 4; -fx-border-radius: 4; -fx-border-color: #cccccc; -fx-background-color: white;">
+                <font>
+                    <Font size="14.0" />
+                </font>
+            </TextField>
+        </VBox>
+
+        <Label fx:id="errorLabel" text="Indirizzo email non valido" textFill="#d32f2f" visible="false" wrapText="true">
+            <font>
+                <Font size="12.0" />
+            </font>
+        </Label>
+
+        <Button fx:id="loginButton" defaultButton="true" maxWidth="Infinity" onAction="#onLoginButtonClick" prefHeight="45.0" style="-fx-background-color: #b01525; -fx-text-fill: white; -fx-cursor: hand; -fx-font-weight: bold; -fx-background-radius: 4;" text="AVANTI">
+            <font>
+                <Font size="14.0" />
+            </font>
+        </Button>
+        <padding>
+            <Insets bottom="30.0" left="20.0" right="20.0" top="20.0" />
+        </padding>
+    </VBox>
+
+    <Label text="Prototipo a scopo didattico" textFill="#999999">
+        <font>
+            <Font size="11.0" />
+        </font>
+    </Label>
+</VBox>
+

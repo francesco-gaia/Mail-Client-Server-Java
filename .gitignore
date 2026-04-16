@@ -1,0 +1,5 @@
+MailClient/target/
+MailServer/target/
+.idea/workspace.xml
+*.DS_Store
+*.json

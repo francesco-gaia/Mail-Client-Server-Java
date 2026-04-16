@@ -1,0 +1,8 @@
+MailClient chiama launch(), che crea  start MainView e ottiene ClientManager, dopodiche chiama ClientManager manager.begin().
+ClientManager crea una ConnectionTask che passa allo ScheduledController per verificare connsessione e aggiungere mail.
+ConnectionTask ha un oggetto di tipo Consumer<List<Mail>>, un interfaccia Java utilizzata per operazioni di callback.
+L'interfaccia ha il metodo accept, che verrà sostituito dal client.controller (modo funzionale) con il codice di aggiunta delle mail lette e dell aggiornamento del campo ConnectionStatus. (importante usare Platform.runlater per modifiche GUI)
+ClientManager mostra la view (stage.show()) e resta in attesa di comandi dall'utente.
+La ConnectionTask verifica periodicamente la connessione e la presenza di nuove mail.
+Quando il client chiede di rispondere ad una mail viene creata una TaskReplyMail e rispettivi client.controller e grafica, viene effettuato il biniding.
+Quando il client chiede di inviare una nuova mail viene creata una TaskNewMail con rispettivi client.controller e grafica, viene effttuato binding.

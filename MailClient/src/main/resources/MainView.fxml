@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+
+<BorderPane prefHeight="650.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="client.controller.MainController">
+
+    <top >
+        <HBox alignment="CENTER_LEFT" spacing="20.0" style="-fx-background-color: #F0F0F0;">
+            <padding>
+                <Insets bottom="10.0" left="20.0" right="20.0" top="10.0" />
+            </padding>
+
+            <HBox alignment="CENTER_LEFT" spacing="10.0">
+                <ImageView fitHeight="100.0" preserveRatio="true">
+                    <image>
+                        <Image url="@images/envelope.png" />
+                    </image>
+                </ImageView>
+
+                <Separator orientation="VERTICAL" />
+
+                <VBox alignment="CENTER_LEFT" spacing="20.0">
+                    <Label fx:id="labelUserAccount" text="nome.cognome@mail.it" textFill="#333333">
+                        <font>
+                            <Font name="System Bold" size="14.0" />
+                        </font>
+                    </Label>
+                    <Button fx:id="buttonLogout" alignment="TOP_LEFT" onAction="#handleLogout"
+                            style="-fx-background-color: transparent; -fx-border-color: #AD1D25; -fx-border-width: 1.5; -fx-border-radius: 4; -fx-text-fill: #AD1D25; -fx-font-weight: bold; -fx-cursor: hand; -fx-padding: 0 15 6 15;"
+                            text="Logout" textFill="#b01525" underline="true">
+                        <font>
+                            <Font size="12.0" />
+                        </font>
+                    </Button>
+                </VBox>
+            </HBox>
+
+            <Region HBox.hgrow="ALWAYS" />
+
+            <Label fx:id="labelConnectionStatus" text="Offline"
+                   style="-fx-font-weight: bold; -fx-font-size: 12px; -fx-text-fill: red;">
+                <HBox.margin>
+                    <Insets right="15.0" />
+                </HBox.margin>
+            </Label>
+
+            <Button fx:id="newMailButton" onAction="#handleNewMail" prefHeight="40.0" prefWidth="140.0" style="-fx-background-color: #b01525; -fx-text-fill: white; -fx-font-weight: bold; -fx-background-radius: 4; -fx-cursor: hand;" text="Nuova mail">
+                <effect>
+                    <javafx.scene.effect.DropShadow color="#00000026" offsetY="2.0" radius="5.0" />
+                </effect>
+            </Button>
+        </HBox>
+    </top>
+
+    <center>
+        <SplitPane dividerPositions="0.35" prefHeight="160.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+            <items>
+                <VBox>
+                    <Label text="In Arrivo" style="-fx-font-weight: bold; -fx-padding: 5; -fx-background-color: #f4f4f4;" maxWidth="Infinity"/>
+                    <Label fx:id="labelStatusMessage" visible="false" text=""
+                           style="-fx-font-weight: bold; -fx-font-size: 13px;">
+                        <HBox.margin>
+                            <Insets right="20.0" /> </HBox.margin>
+                    </Label>
+                    <ListView fx:id="emailListView" VBox.vgrow="ALWAYS" />
+                </VBox>
+
+                <VBox spacing="10.0" fx:id="detailsPane" visible="false">
+                    <padding>
+                        <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+                    </padding>
+                    <HBox spacing="10.0" alignment="CENTER_LEFT">
+                        <Label text="Da:" style="-fx-font-weight: bold;" />
+                        <Label fx:id="labelSender" text="..." />
+                    </HBox>
+                    <HBox spacing="10.0" alignment="CENTER_LEFT">
+                        <Label text="Oggetto:" style="-fx-font-weight: bold;" />
+                        <Label fx:id="labelSubject" text="..." />
+                    </HBox>
+                    <HBox spacing="10.0" alignment="CENTER_LEFT">
+                        <Label text="Data:" style="-fx-font-weight: bold;" />
+                        <Label fx:id="labelDate" text="..." />
+                    </HBox>
+                    <Label text="Messaggio:" style="-fx-font-weight: bold; -fx-padding: 10 0 0 0;" />
+                    <TextArea fx:id="textMessageBody" editable="false" wrapText="true" VBox.vgrow="ALWAYS"
+                              style="-fx-background-color: transparent;"/>
+                    <HBox spacing="10.0" alignment="CENTER_RIGHT">
+                        <Button text="Rispondi" onAction="#handleReply"/>
+                        <Button text="Rispondi a tutti" onAction="#handleReplyAll"/>
+                        <Button text="Inoltra" onAction="#handleForward"/>
+                        <Button text="Elimina" onAction="#handleDelete" style="-fx-text-fill: red;"/>
+                    </HBox>
+                </VBox>
+            </items>
+        </SplitPane>
+    </center>
+</BorderPane>
