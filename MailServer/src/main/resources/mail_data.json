@@ -1,0 +1,111 @@
+[
+  {
+    "username": "mario.rossi@mail.it",
+    "inbox": [
+      {
+        "id": "m4",
+        "sender": "test@mail.it",
+        "recipients": [
+          "davide.giaccherini@mail.it",
+          "mario.rossi@mail.it"
+        ],
+        "subject": "Mail piu destinatari",
+        "text": "cbvuwuvw",
+        "sendDate": "2026-02-05",
+        "isRead": true
+      }
+    ],
+    "mailID": 5
+  },
+  {
+    "username": "davide.giaccherini@mail.it",
+    "inbox": [
+      {
+        "id": "d0",
+        "sender": "mario.rossi@mail.it",
+        "recipients": [
+          "davide.giaccherini@mail.it"
+        ],
+        "subject": "Prova",
+        "text": "dsfdwd",
+        "sendDate": "2026-02-05",
+        "isRead": true
+      },
+      {
+        "id": "d1",
+        "sender": "mario.rossi@mail.it",
+        "recipients": [
+          "davide.giaccherini@mail.it"
+        ],
+        "subject": "Prova doppione",
+        "text": "sdsffwwvv",
+        "sendDate": "2026-02-05",
+        "isRead": true
+      },
+      {
+        "id": "d2",
+        "sender": "mario.rossi@mail.it",
+        "recipients": [
+          "davide.giaccherini@mail.it"
+        ],
+        "subject": "vdvie",
+        "text": "veeevev",
+        "sendDate": "2026-02-05",
+        "isRead": true
+      },
+      {
+        "id": "m4",
+        "sender": "test@mail.it",
+        "recipients": [
+          "davide.giaccherini@mail.it",
+          "mario.rossi@mail.it"
+        ],
+        "subject": "Mail piu destinatari",
+        "text": "cbvuwuvw",
+        "sendDate": "2026-02-05",
+        "isRead": true
+      },
+      {
+        "id": "d4",
+        "sender": "mario.rossi@mail.it",
+        "recipients": [
+          "test@mail.it",
+          "davide.giaccherini@mail.it"
+        ],
+        "subject": "Re: Mail piu destinatari",
+        "text": "ok\n\n--------------------\nMessaggio di [test@mail.it, davide.giaccherini@mail.it]:\ncbvuwuvw",
+        "sendDate": "2026-02-05",
+        "isRead": false
+      }
+    ],
+    "mailID": 5
+  },
+  {
+    "username": "test@mail.it",
+    "inbox": [
+      {
+        "id": "t0",
+        "sender": "mario.rossi@mail.it",
+        "recipients": [
+          "test@mail.it"
+        ],
+        "subject": "Provaaaa",
+        "text": "addadaad dddd",
+        "sendDate": "2026-02-05",
+        "isRead": true
+      },
+      {
+        "id": "t4",
+        "sender": "mario.rossi@mail.it",
+        "recipients": [
+          "test@mail.it"
+        ],
+        "subject": "final test",
+        "text": "Hi, how are you?",
+        "sendDate": "2026-04-16",
+        "isRead": true
+      }
+    ],
+    "mailID": 5
+  }
+]

@@ -1,5 +1,10 @@
+# IDE (IntelliJ)
+.idea/
+*.iml
+
+# Maven Build
 MailClient/target/
 MailServer/target/
-.idea/workspace.xml
+
+# OS Files
 *.DS_Store
-*.json
